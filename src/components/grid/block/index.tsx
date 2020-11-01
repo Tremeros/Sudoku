@@ -12,7 +12,7 @@ const Block: FC<IProps> = ({rowIndex, colIndex}) => {
 
 
     return (
-      <Container data-cy={`block-${colIndex}-${rowIndex}`} />
+      <Container data-cy={`block-${colIndex}-${rowIndex}`}>0</Container>
     )
 }
 
