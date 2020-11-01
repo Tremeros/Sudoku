@@ -1,5 +1,5 @@
 import {GRID, NUMBERS} from 'typings'
-import {shuffle} from 'utils'
+import {isInCol, isInRow, shuffle} from 'utils'
 
 
 const gridExample: GRID = [
@@ -28,7 +28,16 @@ function fillGrid(grid: GRID) {
       if (grid[row][col] === 0) {
            shuffle(numbers) 
 
+            for (let value of numbers) {
+              if(!isInRow({grid, row, value})) {
 
+                      if (!isInCol({col, grid, value})) {
+                        const square = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+                        grid[row][col] = value;
+                      }
+                  }
+              
+            }
         break;
       }
   }
