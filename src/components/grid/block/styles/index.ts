@@ -1,10 +1,15 @@
 import styled, {css} from 'styled-components'
 
+interface IProps {
+  active?: boolean
+}
 
-export const Container = styled.div`
-  ${({theme}) => css`
+
+export const Container = styled.div<IProps>`
+  ${({active, theme}) => css`
      align-items: center;
-     background-color:${theme.colors.white};
+     justify-content: center;
+     background-color:${active ? theme.colors.blue : theme.colors.white};
      border: 1px solid ${theme.colors.black};
      cursor: pointer;
      display: flex;
@@ -14,7 +19,6 @@ export const Container = styled.div`
      font-size: 20px;
      font-weight: bold;
      height: auto;
-     justyify-content: center;
      transition: ${theme.transition};
      user-select: none;
 
