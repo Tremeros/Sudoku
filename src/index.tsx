@@ -15,6 +15,7 @@ ReactDOM.render(
     <Provider store ={store}>
     <Content>
       <Title>Sudoku</Title>
+      <h2>Best sudoku ever made</h2>
       <Card>
         <Grid />
       </Card>

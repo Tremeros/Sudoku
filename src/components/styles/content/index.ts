@@ -6,4 +6,8 @@ export const Content = styled.div`
   flex: 1;
   flex-direction: column;
   justify-content: center;
+  h2 {
+    color: white;
+    text-align: center;
+  }
 `
